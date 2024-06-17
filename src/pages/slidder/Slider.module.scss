@@ -1,0 +1,43 @@
+@import "../../App.scss";
+
+.container {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md{
+        padding: 0px 20px;
+    }
+    p {
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: 0.7px;
+      color: rgb(38, 7, 85);
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    @include md {
+        gap: 2rem;
+      @include sm {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 4rem;
+      }
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

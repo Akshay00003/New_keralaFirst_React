@@ -1,0 +1,116 @@
+@import '../../App.scss';
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md{
+        padding: 20px 0px;
+    }
+    .subContainer{
+        width: 70vw;
+        min-height: 80vh;
+        background-color: #ddd5ca;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0.7rem;
+        @include md{
+            gap: 2rem;
+            @include xsm{
+                width: 90vw;
+            }
+        }
+        .top{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 2rem;
+            p{
+                font-weight: 800;
+                font-size: 4rem;
+                color: #233a56;
+                @include md{
+                    font-size: 2rem;
+                }
+                span{
+                    color: #ff773d;
+                }
+            }
+            .line{
+                height: .3rem;
+                width: 19.7rem;
+                background-color: gray;
+                @include md{
+                    // margin-right: 14rem;
+                    width: 9.5rem;
+                    @include sm{
+                        margin-right: 1rem;
+                        width: 8rem;
+                    }
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            @include md{
+                flex-direction: column;
+                padding: 20px 0px;
+            }
+            .item{
+                width: 300px;
+                height: 300px;
+                border-radius: 8px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-weight: 500;
+                    max-width: 250px;
+                    line-height: 26px;
+                    font-size: 18px;
+
+                }
+                .profile{
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    align-items: center;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                    .name{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        .username{
+                            font-weight: 900;
+                            font-size: 17px;
+                            color: #1e2226;
+                        }
+                        .organization{
+                            font-weight: 500;
+                            font-size: 14px;
+                            letter-spacing: 0.7px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,79 @@
+@import '../../App.scss';
+
+$animation-duration: 2s;
+
+@mixin circle-animation($name, $duration) {
+    @keyframes #{$name} {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-50px);
+      }
+    }
+    
+    animation: #{$name} $duration infinite ease-in-out;
+  }
+
+.container{
+    width: 100%;
+    margin: auto;
+    min-height: 30vh;
+    justify-content: center;
+    display: flex;
+    gap: 5rem;
+    @include xl{
+      gap: 1rem;
+      @include md{
+        gap: 1rem;
+        @include sm{
+          gap: 0.3rem;
+          padding: 0px 10px;
+        }
+      }
+    }
+   
+    .circle{
+        width: 12rem;
+        height: 12rem;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+        box-shadow: 0px 0px 5px black;
+        @include circle-animation(up-down, $animation-duration);
+        @include xl{
+          width: 10rem;
+          height: 10rem;
+          @include sm{
+            width: 6rem;
+            height: 6rem;
+            p{
+              font-size: 0.7rem;
+            }
+            @include xsm{
+              padding:0px 20px;
+              height: 5rem;
+            }
+          }
+        }
+      
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            span{
+                font-size: 3rem;
+                font-weight: 700;
+                @include sm{
+                  font-size: 1rem;
+
+                }
+            }
+        }
+    }
+}

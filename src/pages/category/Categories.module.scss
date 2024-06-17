@@ -1,0 +1,79 @@
+@import "../../App.scss";
+
+.container {
+  margin: auto;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
+    p {
+      font-size: 3rem;
+      font-weight: 700;
+      span {
+        color: rgb(80, 248, 80);
+      }
+    }
+    .line {
+      width: 15rem;
+      height: 0.5rem;
+      background-color: gray;
+      @include md{
+        width: 13rem;
+      }
+    }
+  }
+  .bottom {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    @include xl {
+        grid-template-columns: auto auto;
+      @include md {
+        grid-template-columns: auto;
+      }
+      @include sm {
+        grid-template-columns: auto;
+      }
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid gray;
+      height: 10rem;
+      width: 22rem;
+      @include xl{
+        border-left: none;
+            border: none;
+        @include sm {
+            // border-top: none;
+            border-left: none;
+            border: none;
+          }
+          @include md {
+            border: none;
+          }
+      }
+     
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      p {
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import "../../App.scss";
+
+.container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: #f9eee1;
+  .left {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      width: 5.83vw;
+      height: 4vh;
+      margin-left: 13.33vw;
+      margin-bottom: 3vh;
+      @include md {
+        margin-left: 1.33vw;
+      }
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include xl{
+        position: absolute;
+        z-index: 99;
+        background-color: white;
+        right: 0;
+        top: 13vh;
+        border-radius: 8px;
+        @include sm {
+          position: absolute;
+          z-index: 99;
+          background-color: white;
+          right: 0;
+          top: 13vh;
+          border-radius: 8px;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.33vw;
+
+        @include sm {
+          flex-direction: column;
+          gap: 0px;
+        }
+        @include xl {
+          gap: 1.33vw;
+          flex-direction: column;
+          gap: 0px;
+          @include sm {
+            flex-direction: column;
+            gap: 0px;
+          }
+        }
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.665vw;
+          list-style-type: none;
+          transition: all 300ms ease;
+          @include xl {
+            width: 12rem;
+            border-bottom: 1px solid black;
+            padding: 10px 15px;
+            &:hover {
+              background-color: rgb(184, 180, 180);
+            }
+          }
+          a {
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            transition: all 300ms ease;
+          }
+          .icon {
+            margin-top: 0.3rem;
+            opacity: 0.6;
+            @include sm {
+              visibility: hidden;
+            }
+          }
+        }
+        li:hover {
+          color: green;
+          a {
+            color: green;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.33vw;
+    margin-left: 4.665vw;
+    margin-top: 0.665vw;
+    @include xsm {
+      gap: 0.5rem;
+      margin-right: -1rem;
+    }
+    .menu {
+      visibility: hidden;
+      @include xl {
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+  }
+}

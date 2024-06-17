@@ -1,0 +1,244 @@
+@import "../../App.scss";
+
+.container {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f9eee1, #f4e1d3);
+  @include md {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .left {
+    width: 40%;
+    height: 20rem;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    @include md {
+      width: 80%;
+    }
+    .left1 {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-left: 1.5rem;
+      align-items: flex-start;
+      .leftHead {
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+      .leftSubHead {
+        color: gray;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+      }
+      button {
+        width: 8rem;
+        height: 3rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #ff773d;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 0.7px;
+        transition: all 300ms ease;
+        &:hover {
+          background-color: black;
+          cursor: pointer;
+        }
+      }
+    }
+    .left2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .lt {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        img {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          object-fit: cover;
+          @include xsm {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .square {
+          height: 60px;
+          width: 60px;
+          background-color: #ffe566;
+        }
+      }
+      .rt {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.2rem;
+        @include sm {
+          visibility: hidden;
+        }
+        .triangle {
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+          width: 90px;
+          height: 90px;
+          background-color: #ff773d;
+          @include md {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        .halfCircle {
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          width: 110px;
+          height: 50px;
+          background-color: #6e44b9;
+          rotate: 270deg;
+          @include md {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    width: 40%;
+    height: 20rem;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    @include md {
+      width: 80%;
+      justify-content: center;
+      gap: 8rem;
+      @include sm{
+        gap: 0;
+      }
+    }
+    .right1 {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-left: 1.5rem;
+      align-items: flex-start;
+      @include md {
+        // margin-left: -5rem;
+        @include sm {
+          margin-left: 6rem;
+        }
+      }
+
+      .rightHead {
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+      .rightSubHead {
+        color: gray;
+        font-weight: 500;
+        letter-spacing: 0.7px;
+      }
+      button {
+        width: 8rem;
+        height: 3rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #ff773d;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 0.7px;
+        transition: all 300ms ease;
+        &:hover {
+          background-color: black;
+          cursor: pointer;
+        }
+      }
+    }
+    .right2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .r1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        img {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          object-fit: cover;
+          @include xsm {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        .rectangle {
+          height: 60px;
+          width: 60px;
+          background-color: #37bbf9;
+        }
+      }
+      .r2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2.2rem;
+        @include sm {
+          visibility: hidden;
+        }
+        .tri {
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+          width: 90px;
+          height: 90px;
+          background-color: #ff773d;
+          @include md {
+            width: 60px;
+            height: 60px;
+            margin-right: 1rem;
+          }
+        }
+        .hCircle {
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          width: 110px;
+          height: 50px;
+          rotate: 270deg;
+          background-color: #65edb8;
+          @include md {
+            width: 90px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

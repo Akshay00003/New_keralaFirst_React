@@ -1,0 +1,296 @@
+@import '../../App.scss';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: 
+    #f9eee1;
+    @include md{
+        // max-height: 100vh;
+        padding:40px 20px;
+    }
+    // clip-path: polygon(0% 0%, 91% 0, 99% 53%, 91% 100%, 0% 100%);
+    .middle{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        // padding: 20px 0px;
+        @include md{
+            flex-direction: column;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            @include md{
+                // gap: 6rem;
+            }
+            @include sm{
+                // margin-bottom: 8rem;
+                // gap: 4rem;
+                // margin-top: 2rem;
+                
+            }
+            .head{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+                gap: 0.5rem;
+                margin-top: 8rem;
+                @include md{
+                    margin-left: 1rem;
+                    margin-top: 6rem;
+                    @include sm{
+                        margin-top: 0rem;
+                        @include xsm{
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                        }
+                    }
+                }
+                
+                p{
+                    font-size: 55px;
+                    font-weight: 700;
+                    letter-spacing: 0.5px;
+                    @include sm{
+                        font-size: 30px;
+                        @include xsm{
+                            font-size: 20px;
+                        }
+                    }
+                    span{
+                        color: green;
+                    }
+                }
+                .small{
+                    width: 70%;
+                    font-size: 14px;
+                    line-height: 1.3rem;
+                    color: gray;
+                    letter-spacing: 0.5px;
+                }
+            }
+            .center{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @include sm{
+                    margin-right: 5rem;
+                }
+                img{
+                    margin-left: -19.95vw;
+                    width: 18.62vw;
+                    @include sm{
+                        margin-left: 0;
+                        width: 10.64vw;
+                    }
+                }
+                .wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    p{
+                        font-weight: 500;
+                        letter-spacing: 0.7px;
+                        margin-left: -0.5rem;
+                    }
+                    .sm{
+                        font-weight: 900;
+                        font-size: 18px;
+                        margin-left: 0.15rem;
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                justify-content: center;
+                align-self: start;
+                margin-left: 13.5rem;
+                @include md{
+                    margin-left: 8rem;
+                    @include sm{
+                        margin-left: 7rem;
+                        @include xsm{
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+                
+                button{
+                    width: 12rem;
+                    height: 3rem;
+                    border-radius: 0.5rem;
+                    border: none;
+                    background-color: orange;
+                    font-size: 16px;
+                    letter-spacing: 0.7px;
+                    color: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 300ms ease;
+                    @include xl{
+                        // margin-bottom: 4rem;
+                    }
+                }
+                button:hover{
+                    background-color: rgb(49, 14, 14);
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -4rem;
+            margin-top: 6rem;
+            gap: 1rem;
+            @include md{
+                flex-direction: column;
+                // gap: 4rem;
+                @include sm{
+                    flex-direction: column;
+                    // margin-top: 1rem;
+                    @include xsm{
+                        margin-left: -7rem;
+                    }
+                }
+            }
+           
+            .lt{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 1rem;
+                .pic1{
+                    border-top-left-radius: 80px;
+                    border-top-right-radius: 60px;
+                    border-bottom-left-radius: 90px;
+                    overflow: hidden;
+                    img{
+                        width: 270px;
+                        height: 300px;
+                        @include md{
+                            width: 180px;
+                            height: 200px;
+                        }
+                        @include sm{
+                            width: 120px;
+                            height: 200px;
+                        }
+                    }
+                }.shape1{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .halfCircle1{
+                        width: 70px;
+                        height: 120px;
+                        background-color: rgb(69, 4, 89);
+                        border-top-left-radius: 100px; /* Half of the width and height */
+                        border-bottom-left-radius: 100px;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        rotate: 180deg;
+                        @include sm{
+                            width: 40px;
+                            height: 80px;
+                        }
+                    }
+                    .halfCircle2{
+                        width: 70px;
+                        height: 120px;
+                        background-color: rgb(69, 4, 89);
+                        border-top-left-radius: 100px; /* Half of the width and height */
+                        border-bottom-left-radius: 100px;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        rotate: 180deg;
+                        @include sm{
+                            width: 40px;
+                            height: 80px;
+                        }
+                    }
+
+                }
+            }
+            .rt{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                @include sm{
+                    gap: 0rem;
+                }
+                .shape2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 6rem;
+                    // gap: 1rem;
+                    @include md{
+                        visibility: hidden;
+                    }
+                    .triangle1{
+                        width: 0;
+                        height: 0;
+                        border-top: 50px solid transparent;
+                        border-bottom: 50px solid transparent;
+                        border-left: 60px solid rgb(241, 241, 66);
+                        rotate: -45deg;
+                        position: relative;
+                        @include sm{
+                            border-top: 35px solid transparent;
+                            border-bottom: 35px solid transparent;
+                            border-left: 40px solid rgb(241, 241, 66);
+                        }
+                    }
+                    .triangle2{
+                        width: 0;
+                        height: 0;
+                        border-top: 50px solid transparent;
+                        border-bottom: 50px solid transparent;
+                        border-left: 60px solid rgb(241, 241, 66);
+                        rotate: -45deg;
+                        position: absolute;
+                        margin-left: 6rem;
+                        margin-bottom: 6rem;
+                        @include sm{
+                            border-top: 35px solid transparent;
+                            border-bottom: 35px solid transparent;
+                            border-left: 40px solid rgb(241, 241, 66);
+                        }
+                    }
+                }
+                .pic2{
+                    border-top-left-radius: 60px;
+                    border-bottom-left-radius: 80px;
+                    border-bottom-right-radius: 90px;
+                    overflow: hidden;
+                    img{
+                        width: 270px;
+                        height: 300px;
+                        @include md{
+                            width: 180px;
+                            height: 200px;
+                        }
+                        @include sm{
+                            width: 110px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
