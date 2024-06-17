@@ -1,12 +1,12 @@
 import style from "./Footer.module.scss";
-import {
-  FaFacebookF,
-  FaYoutube,
-  FaLinkedinIn,
-  FaRegCopyright,
-} from "react-icons/fa";
-import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
-import logo1 from '../../assets/images/logo1.png'
+// import {
+//   FaFacebookF,
+//   FaYoutube,
+//   FaLinkedinIn,
+//   FaRegCopyright,
+// } from "react-icons/fa";
+// import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
+import logo1 from "../../assets/images/logo1.png";
 
 const Footer = () => {
   return (
@@ -58,21 +58,21 @@ const Footer = () => {
                 Email : <span>info@yourmail.com</span>
               </p>
             </div>
-            <div className={style.icons}>
+            {/* <div className={style.icons}>
               <FaFacebookF />
               <FaXTwitter />
               <FaYoutube />
               <FaWhatsapp />
               <FaLinkedinIn />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <div className={style.bottom}>
         <p>
-          <span>
+          {/* <span>
             <FaRegCopyright size={15} />
-          </span>{" "}
+          </span> */}
           Copyright 2024 Edubin| Developed by Mashup technologies
         </p>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import style from "./Navbar.module.scss";
 import { IoIosArrowDown, IoMdCart } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
